@@ -1,7 +1,7 @@
 <?php
 
-
 use App\Http\Controllers\PagesController;
+use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -23,5 +23,9 @@ use Illuminate\Support\Facades\Route;
 // Route::get('/products', 'App\Http\Controllers\ProductsController@index');
 
 //Laravel 10
-Route::get('/products', [PagesController::class, 'index']);
+
+Route::get('/', [PagesController::class, 'index']);
 Route::get('/about', [PagesController::class, 'about']);
+
+//Posts endpoint
+Route::get('/posts', [PostController::class, 'index']);
